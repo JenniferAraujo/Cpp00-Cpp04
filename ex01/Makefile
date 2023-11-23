@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/20 18:11:47 by jenny             #+#    #+#              #
-#    Updated: 2023/11/23 17:17:10 by jede-ara         ###   ########.fr        #
+#    Created: 2023/11/23 17:17:26 by jede-ara          #+#    #+#              #
+#    Updated: 2023/11/23 18:50:30 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ GREEN	:= \033[1;32m
 RED		:= \033[1;31m
 RES		:= \033[0m
 
-SRC = megaphone.cpp
+SRC = phonebook.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
