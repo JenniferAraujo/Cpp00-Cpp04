@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:01:42 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/11/29 21:10:14 by jenny            ###   ########.fr       */
+/*   Updated: 2023/11/30 18:14:08 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ bool validation_digits(std::string number){
 	if (number[0] == '+')
 		i++;
 	while (i < number.length()){
-		if (!(isdigit(number[i]) || isspace(number[i]))){
+		if (!(isdigit(number[i])))
 			return true;
-		}
 		i++;
 	}
 	return false;
@@ -30,5 +29,7 @@ bool validation_digits(std::string number){
 int main(void){
 		PhoneBook phonebook;
 		phonebook.add();
+		phonebook.add();
+		phonebook.search();
 		return 0;
 }

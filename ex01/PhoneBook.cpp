@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:59:30 by jenny             #+#    #+#             */
-/*   Updated: 2023/11/29 21:10:05 by jenny            ###   ########.fr       */
+/*   Updated: 2023/11/30 18:01:03 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,16 @@ void    PhoneBook::add(void){
 	 std::cout << "*-----*-----* CONTACT ADDED TO PHONEBOOK *-----*-----*\n";
 }
 
-//void    PhoneBook::search(void){   
-//}
+void    PhoneBook::search(void){
+	//int index;
+	
+	std::system("clear");
+	std::cout << "*-----*-----*-----*-----*-----*\n";
+	std::cout << "*           SEARCH            *\n";
+	std::cout << "*-----*-----*-----*-----*-----*\n\n";
+	std::cout << "\t|" << std::setw(10) << "Index" << "|" << std::setw(10) << "First Name" << "|" << std::setw(10) << "Last Name" << "|" << std::setw(10) << "Nickname" << "|" << std::endl;
+	for (int i = 0; i < 8; i++)
+	{
+		std::cout << "\t|" <<  std::setw(10) << i + 1 << "|" << std::setw(10) << this->contact[i].get_fields(1) << "|" << std::setw(10) << this->contact[i].get_fields(2) << "|" << std::setw(10) << this->contact[i].get_fields(3) << "|" << std::endl;
+	}
+}

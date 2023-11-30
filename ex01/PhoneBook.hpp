@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 17:25:05 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/11/29 20:38:35 by jenny            ###   ########.fr       */
+/*   Updated: 2023/11/30 17:18:31 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-#include "Contact.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <cctype>
+#include <iomanip>
 #include <string>
 #include <unistd.h>
+#include "Contact.hpp"
 
 //classe para o phone
 class PhoneBook{
