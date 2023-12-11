@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:59:30 by jenny             #+#    #+#             */
-/*   Updated: 2023/11/30 18:01:03 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:45:49 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,24 @@ void    PhoneBook::add(void){
 	std::cout << "*-----*-----*-----*-----*-----*\n\n";
 	std::cout << "First Name: ";
 	std::getline(std::cin, first);
+	if (std::cin.eof())
+		exit(0);
 	std::cout << "Last Name: ";
 	std::getline(std::cin, last);
+	if (std::cin.eof())
+		exit(0);
 	std::cout << "Nickname: ";
 	std::getline(std::cin, nick);
+	if (std::cin.eof())
+		exit(0);
 	std::cout << "Number: ";
 	std::getline(std::cin, num);
+	if (std::cin.eof())
+		exit(0);
 	std::cout << "Darkest Secret: ";
 	std::getline(std::cin, ds);
+	if (std::cin.eof())
+		exit(0);
 	 
 	 if (first.empty() || last.empty() || nick.empty() || num.empty() || ds.empty()){
 		std::system("clear");
@@ -46,8 +56,7 @@ void    PhoneBook::add(void){
 }
 
 void    PhoneBook::search(void){
-	//int index;
-	
+	std::string str;
 	std::system("clear");
 	std::cout << "*-----*-----*-----*-----*-----*\n";
 	std::cout << "*           SEARCH            *\n";
@@ -57,4 +66,14 @@ void    PhoneBook::search(void){
 	{
 		std::cout << "\t|" <<  std::setw(10) << i + 1 << "|" << std::setw(10) << this->contact[i].get_fields(1) << "|" << std::setw(10) << this->contact[i].get_fields(2) << "|" << std::setw(10) << this->contact[i].get_fields(3) << "|" << std::endl;
 	}
+	std::cout << "Choose a index: " << std::endl;
+	std::getline(std::cin, str);
+	if (std::cin.eof())
+		exit(0);
+	int index = atoi(str.c_str());
+	if (index < 1 || index > 8){
+		std::cout << "Error: invalid index!" << std::endl;
+		return ;
+	}
+	this->contact[index - 1].print();
 }

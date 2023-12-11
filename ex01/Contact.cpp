@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:59:45 by jenny             #+#    #+#             */
-/*   Updated: 2023/11/30 18:23:13 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:27:41 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,12 @@ std::string	Contact::get_fields(int n){
 	}
 	else
 		return (0);
+}
+
+void	Contact::print(){
+	std::cout << "First name: " << this->first_name << std::endl;
+	std::cout << "Last name: " << this->last_name << std::endl;
+	std::cout << "Nickname: " << this->nickname << std::endl;
+	std::cout << "Name: " << this->number << std::endl;
+	std::cout << "Darkest secret: " << this->secret << std::endl;
 }

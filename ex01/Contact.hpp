@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:18:27 by jede-ara          #+#    #+#             */
-/*   Updated: 2023/11/30 17:53:32 by jede-ara         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:13:17 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define CONTACT_H
 
 # include "PhoneBook.hpp"
-//#include <string>
 
 class Contact{
 	private:
@@ -25,9 +24,9 @@ class Contact{
 		std::string	number;
 	public:
 		std::string	get_fields(int n);
+		void	print();
 		Contact(void);
 		Contact(std::string fn, std::string ln, std::string nk, std::string nb, std::string ds);
-		//~Contact(void);
 };
 
 bool validation_digits(std::string number);
