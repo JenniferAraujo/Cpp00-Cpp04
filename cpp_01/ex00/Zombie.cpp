@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 18:18:55 by jenny             #+#    #+#             */
-/*   Updated: 2023/11/20 19:06:08 by jenny            ###   ########.fr       */
+/*   Created: 2023/12/14 17:35:18 by jenny             #+#    #+#             */
+/*   Updated: 2023/12/14 18:09:37 by jenny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#include "Zombie.hpp"
 
-int	main(int ac, char **av)
-{
-	if (ac > 1){
-		for (int i = 1; i < ac; i++){
-			std::string str = av[i];
-			for (int j = 0; av[i][j] != '\0'; j++)
-				str[j] = toupper(str[j]);
-			std::cout << str;
-		}
-		std::cout << std::endl;
-		return (0);
-	}
-	else
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+void	Zombie::announce(void){
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void    Zombie::setName( std::string name){
+    this->_name = name;
+    return ;
 }

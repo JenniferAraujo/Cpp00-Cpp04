@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jenny <jenny@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/23 17:17:26 by jede-ara          #+#    #+#              #
-#    Updated: 2023/11/29 21:10:18 by jenny            ###   ########.fr        #
+#    Created: 2023/12/14 16:51:47 by jenny             #+#    #+#              #
+#    Updated: 2023/12/14 18:09:43 by jenny            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,13 @@ GREEN	:= \033[1;32m
 RED		:= \033[1;31m
 RES		:= \033[0m
 
-SRC = PhoneBook.cpp Contact.cpp main.cpp
+SRC = Zombie.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
-NAME = phonebook
+NAME = zombie
 
 all: $(NAME)
 
