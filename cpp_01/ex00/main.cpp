@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 17:34:19 by jenny             #+#    #+#             */
-/*   Updated: 2023/12/14 18:09:40 by jenny            ###   ########.fr       */
+/*   Updated: 2024/01/16 18:03:37 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 int	main(void){
-	std::cout << "ola otaria" << std::endl;
+	randomChump("Jennifer ");
+	Zombie *zm = newZombie("Jessica ");
+	delete zm;
 }

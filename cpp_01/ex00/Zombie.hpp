@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 16:58:51 by jenny             #+#    #+#             */
-/*   Updated: 2023/12/14 18:09:41 by jenny            ###   ########.fr       */
+/*   Updated: 2024/01/16 17:50:45 by jede-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ class Zombie{
 	private:
 		std::string	_name; //boa pratica variaveis privadas _
 	public:
-		Zombie(void); // construtor
+		Zombie(std::string name); // construtor
 		~Zombie(void); // destrutor
 		void	announce(void); // só para imprimir o nome+BraiiiiiiinnnzzzZ...
 		void    setName(std::string name); //serve p/ definir o nome do Zombie
 };
 
 Zombie* newZombie(std::string name ); // cria um Zombie
-void randomChump(std::string name ); // cria um zumbi, dá um nome e chama função announce
+void randomChump( std::string name ); // cria um zumbi, dá um nome e chama função announce
 
 #endif

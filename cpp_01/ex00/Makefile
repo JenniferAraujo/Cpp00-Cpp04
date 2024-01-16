@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jenny <jenny@student.42.fr>                +#+  +:+       +#+         #
+#    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/14 16:51:47 by jenny             #+#    #+#              #
-#    Updated: 2023/12/14 18:09:43 by jenny            ###   ########.fr        #
+#    Updated: 2024/01/16 17:51:28 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ GREEN	:= \033[1;32m
 RED		:= \033[1;31m
 RES		:= \033[0m
 
-SRC = Zombie.cpp main.cpp
+SRC = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
