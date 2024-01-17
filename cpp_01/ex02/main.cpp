@@ -7,5 +7,15 @@
 
 
 int main(void){
-    std::cout << "ola otaria" << std::endl;
+    std::string original = "HI THIS IS BRAIN";
+    std::string *stringPTR = &original;
+    std::string &stringREF = original;
+
+    std::cout << "original: " << &original << std::endl;
+    std::cout << "stringPTR: " << stringPTR << std::endl;
+    std::cout << "stringREF: " << &stringREF << std::endl;
+
+    std::cout << "original: " << original << std::endl;
+    std::cout << "stringPTR: " << *stringPTR << std::endl;
+    std::cout << "stringREF: " << stringREF << std::endl;
 }

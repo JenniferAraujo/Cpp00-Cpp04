@@ -6,7 +6,7 @@
 #    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 18:08:26 by jede-ara          #+#    #+#              #
-#    Updated: 2024/01/16 18:52:48 by jede-ara         ###   ########.fr        #
+#    Updated: 2024/01/16 18:56:59 by jede-ara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
-NAME = zombie
+NAME = brainz
 
 all: $(NAME)
 
