@@ -5,7 +5,6 @@
 #include <string>
 #include <unistd.h>
 
-
 int main(void){
     std::string original = "HI THIS IS BRAIN";
     std::string *stringPTR = &original;
