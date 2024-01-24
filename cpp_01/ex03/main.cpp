@@ -10,16 +10,16 @@ Enquanto ponteiros oferecem mais flexibilidade em algumas situações
 int	main(void){
 	{
 		Weapon club = Weapon("crude spiked club");
-		HumanA jennifer("Jennifer", club);
-		jennifer.attack();
+		HumanA bob("Bob", club);
+		bob.attack();
 		club.setType("some other type of club");
-		jennifer.attack();
+		bob.attack();
 	}
 	{
 		Weapon club = Weapon("crude spiked club");
-		HumanB jessica("Jessica");
-		jessica.attack();
+		HumanB jim("Jim");
+		jim.attack();
 		club.setType("some other type of club");
-		jessica.attack();
+		jim.attack();
 	}
 }
