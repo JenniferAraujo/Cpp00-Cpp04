@@ -6,9 +6,9 @@ SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS = -Wall -Wextra -std=c++98 -pedantic
 
-NAME = 
+NAME = replace
 
 all: $(NAME)
 
