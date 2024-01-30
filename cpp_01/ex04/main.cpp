@@ -1,4 +1,4 @@
-#include "replace.hpp"
+#include "Replace.hpp"
 
 std::string replace_word(std::string original, std::string word_replace, std::string *line){
     size_t  index;
@@ -11,11 +11,6 @@ std::string replace_word(std::string original, std::string word_replace, std::st
         before = (*line).substr(0,index);
         after = (*line).substr(index + original.length(), (*line).length() - (before.length() + original.length()));
         *line = before.append(word_replace).append(after);
-        
-        std::cout << "before: " << before << "." <<  std::endl;
-        std::cout << "after: " << after << "." << std::endl;
-        std::cout << "line: " << *line << "." << std::endl;
-
         index = (*line).find(original, index + 1);
     }
     return (*line);
