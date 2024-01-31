@@ -21,13 +21,34 @@ void	Harl::error( void ){
 }
 
 void    Harl::complain(std::string level){
+    void (Harl::*pointers[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     std::string options[4] = {"debug", "info", "warning", "error"};
     
-    void (Harl::*pointers[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-
-    for(int i = 0; i < 4;i++){
-        if(!options[i].compare(level))
-            (this->*pointers[i])();
+    int op = 4;
+    for (int i = 0; i < 4; i++)
+    {
+        if (level.compare(options[i]) == 0)
+            op = i;
+    }
+    switch (op){
+        case 0:
+            (this->*pointers[op])();
+            op++;
+            break ;
+        case 1:
+            (this->*pointers[op])();
+            op++;
+            break ;
+        case 2:
+            (this->*pointers[op])();
+            op++;
+            break ;
+        case 3:
+            (this->*pointers[op])();
+            break;
+        default:
+            std::cout << "Invalid option, try again! Available options: debug, info, warning, error";
+            break;
     }
 }
 
