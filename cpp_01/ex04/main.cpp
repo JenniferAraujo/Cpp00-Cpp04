@@ -1,10 +1,12 @@
 #include "Replace.hpp"
 
-std::string replace_word(std::string original, std::string word_replace, std::string *line){
+std::string replace_word(std::string original, std::string word_replace, std::string *line)
+{
     size_t  index;
     index = (*line).find(original);
 
-    while (index < (*line).length()){
+    while (index < (*line).length())
+    {
         std::string after;
         std::string before;
 
@@ -14,10 +16,10 @@ std::string replace_word(std::string original, std::string word_replace, std::st
         index = (*line).find(original, index + 1);
     }
     return (*line);
-
 }
 
-void    replace(std::string original, std::string   word_replace, std::string file_name){
+void    replace(std::string original, std::string   word_replace, std::string file_name)
+{
     std::ifstream    file;
     std::string     line;
 
@@ -27,8 +29,10 @@ void    replace(std::string original, std::string   word_replace, std::string fi
         std::ofstream   file_replace;
         file_replace.open(fileReplace.c_str());
         
-        if(file_replace.is_open()) {
-            while(std::getline(file, line)){
+        if(file_replace.is_open())
+        {
+            while(std::getline(file, line))
+            {
                 replace_word(original, word_replace, &line);
                 file_replace << line;
                 if (!file.eof())
@@ -40,15 +44,14 @@ void    replace(std::string original, std::string   word_replace, std::string fi
     file.close();
 }
 
-int    main(int ac, char **av){
+int    main(int ac, char **av)
+{
     std::string original = av[2];
-    if (ac == 4){
-        if (!original.empty()){
+    if (ac == 4)
+    {
+        if (!original.empty())
             replace(av[2], av[3], av[1]);
-        }
-        else{
+        else
             std::cout << "Please enter valid word" << std::endl;
-        }
-    }
-        
+    }    
 }

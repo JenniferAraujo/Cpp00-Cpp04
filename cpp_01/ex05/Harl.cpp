@@ -20,12 +20,14 @@ void	Harl::error( void ){
     std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void    Harl::complain(std::string level){
+void    Harl::complain(std::string level)
+{
     std::string options[4] = {"debug", "info", "warning", "error"};
     
     void (Harl::*pointers[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
-    for(int i = 0; i < 4;i++){
+    for(int i = 0; i < 4;i++)
+    {
         if(!options[i].compare(level))
             (this->*pointers[i])();
     }
