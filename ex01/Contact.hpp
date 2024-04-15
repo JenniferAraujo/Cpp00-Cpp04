@@ -15,6 +15,7 @@ class Contact{
 		void	print();
 		Contact(void);
 		Contact(std::string fn, std::string ln, std::string nk, std::string nb, std::string ds);
+		~Contact();
 };
 
 bool validation_digits(std::string number);

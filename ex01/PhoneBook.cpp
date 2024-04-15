@@ -1,5 +1,12 @@
 #include "PhoneBook.hpp"
 
+PhoneBook::PhoneBook()
+{
+	i = 0;
+}
+
+PhoneBook::~PhoneBook() {}
+
 void    PhoneBook::add(void){
 	std::string first, last, nick, num, ds;
 

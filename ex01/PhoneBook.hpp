@@ -14,6 +14,8 @@ class PhoneBook{
 		int	i;
         Contact contact[8];
 public:
+    PhoneBook();
+    ~PhoneBook();
     void    add(void);
     void    search(void);
 };

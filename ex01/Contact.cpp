@@ -38,3 +38,5 @@ void	Contact::print(){
 	std::cout << "Name: " << this->number << std::endl;
 	std::cout << "Darkest secret: " << this->secret << std::endl;
 }
+
+Contact::~Contact() {};
