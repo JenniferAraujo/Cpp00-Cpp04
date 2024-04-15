@@ -16,16 +16,16 @@ RES		:= \033[0m
 
 SRC = megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
-CC = c++
+CXX = c++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = megaphone
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 	@echo "$(GREEN)Compilation done!$(RESET)"
 
 clean:
@@ -38,6 +38,6 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.SILENT:
+#.SILENT:
 
 .PHONY: all clean fclean re
