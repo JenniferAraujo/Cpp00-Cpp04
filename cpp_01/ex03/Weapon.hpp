@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jenny <jenny@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 16:26:42 by jenny             #+#    #+#             */
-/*   Updated: 2024/01/24 17:31:29 by jenny            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 
@@ -28,10 +16,10 @@ class Weapon{
 			std::string	_type;
 	public: 
 			Weapon();
-			Weapon(std::string	weaponType);
+			Weapon(std::string	weaponType); /*especificar o tipo da arma*/
 			~Weapon();
-			std::string	getType() const;
-			void	setType(std::string	newType);
+			std::string	getType() const; /*obter o tipo da arma*/
+			void	setType(std::string	newType); /*define o tipo da arma*/
 };
 
 #endif

@@ -13,7 +13,7 @@ void	HumanB::attack(){
 	if (!_weapon)
 		std::cout << this->_name << " is a pacifist... for now" << std::endl;
 	else
-		std::cout << this->_name << "attacks with their" << this->_weapon->getType() << std::endl;
+		std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl;
 }
 
 HumanB::~HumanB(){

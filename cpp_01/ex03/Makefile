@@ -4,16 +4,16 @@ RES		:= \033[0m
 
 SRC = HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
 OBJ = $(SRC:.cpp=.o)
-CC = g++
+CXX = c++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = weapon
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 	@echo "$(GREEN)Compilation done!$(RESET)"
 
 clean:

@@ -1,31 +1,19 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/16 18:08:26 by jede-ara          #+#    #+#              #
-#    Updated: 2024/01/16 18:37:12 by jede-ara         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 GREEN	:= \033[1;32m
 RED		:= \033[1;31m
 RES		:= \033[0m
 
 SRC = Zombie.cpp main.cpp zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
-CC = g++
+CXX = c++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = zombie
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 	@echo "$(GREEN)Compilation done!$(RESET)"
 
 clean:

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jede-ara <jede-ara@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/14 16:58:51 by jenny             #+#    #+#             */
-/*   Updated: 2024/01/16 17:50:45 by jede-ara         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
@@ -20,17 +8,18 @@
 #include <string>
 #include <unistd.h>
 
-class Zombie{
+class Zombie
+{
 	private:
 		std::string	_name; //boa pratica variaveis privadas _
 	public:
-		Zombie(std::string name); // construtor
-		~Zombie(void); // destrutor
-		void	announce(void); // só para imprimir o nome+BraiiiiiiinnnzzzZ...
+		Zombie(std::string name); // construtor inicializa e indica nascimento zombie
+		~Zombie(void); // destrutor  e indica morte zombie
+		void	announce(void); //  imprime o nome+BraiiiiiiinnnzzzZ...
 		void    setName(std::string name); //serve p/ definir o nome do Zombie
 };
 
-Zombie* newZombie(std::string name ); // cria um Zombie
-void randomChump( std::string name ); // cria um zumbi, dá um nome e chama função announce
+Zombie* newZombie(std::string name ); // Aloca dinamicamente memória para um novo zombie com o nome fornecido e retorna um ponteiro para ele
+void randomChump( std::string name ); // Cria um zombie localmente com o nome fornecido e o faz anunciar sua presença
 
 #endif

@@ -41,6 +41,7 @@ void    PhoneBook::add(void){
 		return ;
 	 }
 	 if (validation_digits(num)){
+	 	std::system("clear");
 		std::cout << std::endl << "ERROR: INVALID NUMBER! " << std::endl;
 		return ;
 	 }

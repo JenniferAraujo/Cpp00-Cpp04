@@ -7,7 +7,8 @@ Referências são frequentemente usadas quando se quer garantir que o objeto ref
 Enquanto ponteiros oferecem mais flexibilidade em algumas situações
 */
 
-int	main(void){
+int main(void)
+{
 	{
 		Weapon club = Weapon("crude spiked club");
 		HumanA bob("Bob", club);
@@ -18,8 +19,10 @@ int	main(void){
 	{
 		Weapon club = Weapon("crude spiked club");
 		HumanB jim("Jim");
+		jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");
 		jim.attack();
 	}
+	return (0);
 }
