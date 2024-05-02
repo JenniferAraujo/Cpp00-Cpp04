@@ -46,9 +46,9 @@ void    replace(std::string original, std::string   word_replace, std::string fi
 
 int    main(int ac, char **av)
 {
-    std::string original = av[2];
     if (ac == 4)
     {
+	std::string original = av[2];
         if (!original.empty())
             replace(av[2], av[3], av[1]);
         else

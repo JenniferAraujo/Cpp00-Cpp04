@@ -13,7 +13,7 @@ void	Harl::info( void ){
 }
 
 void	Harl::warning( void ){
-    std::cout << "think I deserve to have some extra bacon for free. I've been coming for years whereas you started working here since last month." << std::endl;
+    std::cout << "I think I deserve to have some extra bacon for free. I've been coming for years whereas you started working here since last month." << std::endl;
 }
 
 void	Harl::error( void ){
