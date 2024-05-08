@@ -90,7 +90,7 @@ Fixed& Fixed::operator* (const Fixed &copy)
 
 Fixed& Fixed::operator/ (const Fixed &copy)
 {
-	std::cout << "Multiplication operator called" << std::endl;
+	std::cout << "Division operator called" << std::endl;
 	this->_fixedPoint /= copy._fixedPoint;
 	this->_fixedPoint = this->_fixedPoint * (1 << this->_fract);
 	return (*this);
