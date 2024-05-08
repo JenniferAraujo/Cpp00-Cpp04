@@ -31,6 +31,71 @@ Fixed& Fixed::operator= (const Fixed &copy)
     return (*this);
 }
 
+bool Fixed::operator==(const Fixed &jamal)
+{
+    std::cout << "Equal operator called" << std::endl;
+    return (this->_fixedPoint == jamal._fixedPoint);
+}
+
+bool Fixed::operator!=(const Fixed &jamal)
+{
+    std::cout << "Different operator called" << std::endl;
+    return (this->_fixedPoint != jamal._fixedPoint);
+}
+
+bool Fixed::operator<=(const Fixed &jamal)
+{
+    std::cout << "Less or equal operator called" << std::endl;
+    return (this->_fixedPoint <= jamal._fixedPoint);
+}
+
+bool Fixed::operator>=(const Fixed &jamal)
+{
+    std::cout << "Greater than or equal operator called" << std::endl;
+    return (this->_fixedPoint >= jamal._fixedPoint);
+}
+
+bool Fixed::operator<(const Fixed &jamal)
+{
+    std::cout << "Less than operator called" << std::endl;
+    return (this->_fixedPoint < jamal._fixedPoint);
+}
+
+bool Fixed::operator>(const Fixed &jamal)
+{
+    std::cout << "Greater than operator called" << std::endl;
+    return (this->_fixedPoint > jamal._fixedPoint);
+}
+
+
+Fixed& Fixed::operator+ (const Fixed &copy)
+{
+	std::cout << "Addition operator called" << std::endl;
+	return (this->_fixedPoint + copy._fixedPoint);
+}
+
+Fixed& Fixed::operator- (const Fixed &copy)
+{
+	std::cout << "Subtraction operator called" << std::endl;
+	return (this->_fixedPoint - copy._fixedPoint);
+}
+
+Fixed& Fixed::operator* (const Fixed &copy)
+{
+	std::cout << "Multiplication operator called" << std::endl;
+	this->_fixedPoint *= copy._fixedPoint;
+	this->_fixedPoint = this->_fixedPoint / (1 << this->_fract);
+	return (*this);
+}
+
+Fixed& Fixed::operator/ (const Fixed &copy)
+{
+	std::cout << "Multiplication operator called" << std::endl;
+	this->_fixedPoint /= copy._fixedPoint;
+	this->_fixedPoint = this->_fixedPoint * (1 << this->_fract);
+	return (*this);
+}
+
 // Destructor
 Fixed::~Fixed()
 {

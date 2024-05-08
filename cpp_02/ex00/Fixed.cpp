@@ -24,6 +24,7 @@ Fixed& Fixed::operator= (const Fixed &copy)
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;
+    return ;
 }
 
 // Member function to get raw bits
