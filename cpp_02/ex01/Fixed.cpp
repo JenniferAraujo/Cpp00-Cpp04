@@ -50,6 +50,7 @@ void Fixed::setRawBits( int const raw )
 {
         this->_fixedPoint = raw;
 }
+
 /*converte o valor fixo para um numero em ponto flutuante.  Divide o valor _fixedPoint pelo fator de escala, que e 2 elevado ao num de bits fracionarios _fract(8)
 Ex: _fixedPoint = 100 e _fract = 8, a funcao retornara 100 / 256 = 0.390625. 256 pq 2 elevado a 8 e 256 que em binario e 10000000 ou seja, 1 << 8*/
 float Fixed::toFloat( void ) const

@@ -31,56 +31,61 @@ Fixed& Fixed::operator= (const Fixed &copy)
     return (*this);
 }
 
-bool Fixed::operator==(const Fixed &jamal)
+bool Fixed::operator== (const Fixed &numCompare)
 {
     std::cout << "Equal operator called" << std::endl;
-    return (this->_fixedPoint == jamal._fixedPoint);
+    return (this->_fixedPoint == numCompare._fixedPoint);
 }
 
-bool Fixed::operator!=(const Fixed &jamal)
+bool Fixed::operator!= (const Fixed &numCompare)
 {
     std::cout << "Different operator called" << std::endl;
-    return (this->_fixedPoint != jamal._fixedPoint);
+    return (this->_fixedPoint != numCompare._fixedPoint);
 }
 
-bool Fixed::operator<=(const Fixed &jamal)
+bool Fixed::operator<= (const Fixed &numCompare)
 {
     std::cout << "Less or equal operator called" << std::endl;
-    return (this->_fixedPoint <= jamal._fixedPoint);
+    return (this->_fixedPoint <= numCompare._fixedPoint);
 }
 
-bool Fixed::operator>=(const Fixed &jamal)
+bool Fixed::operator>= (const Fixed &numCompare)
 {
     std::cout << "Greater than or equal operator called" << std::endl;
-    return (this->_fixedPoint >= jamal._fixedPoint);
+    return (this->_fixedPoint >= numCompare._fixedPoint);
 }
 
-bool Fixed::operator<(const Fixed &jamal)
+bool Fixed::operator< (const Fixed &numCompare)
 {
     std::cout << "Less than operator called" << std::endl;
-    return (this->_fixedPoint < jamal._fixedPoint);
+    return (this->_fixedPoint < numCompare._fixedPoint);
 }
 
-bool Fixed::operator>(const Fixed &jamal)
+bool Fixed::operator> (const Fixed &numCompare)
 {
     std::cout << "Greater than operator called" << std::endl;
-    return (this->_fixedPoint > jamal._fixedPoint);
+    return (this->_fixedPoint > numCompare._fixedPoint);
 }
 
-
-Fixed& Fixed::operator+ (const Fixed &copy)
+Fixed Fixed::operator+ (const Fixed &copy)
 {
+	Fixed	result;
+
 	std::cout << "Addition operator called" << std::endl;
-	return (this->_fixedPoint + copy._fixedPoint);
+	result._fixedPoint = this->_fixedPoint + copy._fixedPoint;
+	return (result);
 }
 
-Fixed& Fixed::operator- (const Fixed &copy)
+Fixed Fixed::operator- (const Fixed &copy)
 {
+	Fixed	result;
+
 	std::cout << "Subtraction operator called" << std::endl;
-	return (this->_fixedPoint - copy._fixedPoint);
+	result._fixedPoint = this->_fixedPoint - copy._fixedPoint;
+	return (result);
 }
 
-Fixed& Fixed::operator* (const Fixed &copy)
+Fixed Fixed::operator* (const Fixed &copy)
 {
 	std::cout << "Multiplication operator called" << std::endl;
 	this->_fixedPoint *= copy._fixedPoint;
@@ -88,12 +93,84 @@ Fixed& Fixed::operator* (const Fixed &copy)
 	return (*this);
 }
 
-Fixed& Fixed::operator/ (const Fixed &copy)
+Fixed Fixed::operator/ (const Fixed &copy)
 {
 	std::cout << "Division operator called" << std::endl;
 	this->_fixedPoint /= copy._fixedPoint;
 	this->_fixedPoint = this->_fixedPoint * (1 << this->_fract);
 	return (*this);
+}
+
+Fixed Fixed::operator++ ()
+{
+	Fixed	aux;
+
+	std::cout << "'Pre Increment' operator called" << std::endl;
+	++this->_fixedPoint;
+	aux._fixedPoint = this->_fixedPoint;
+	return (aux);
+}
+
+Fixed Fixed::operator++ (int)
+{
+	Fixed	aux;
+
+	std::cout << "'Pos increment' operator called" << std::endl;
+	aux._fixedPoint = this->_fixedPoint++;
+	return (aux);
+}
+
+Fixed Fixed::operator-- ()
+{
+	Fixed	aux;
+
+	std::cout << "'Pre decrement' operator called" << std::endl;
+	--this->_fixedPoint;
+	aux._fixedPoint = this->_fixedPoint;
+	return (aux);
+}
+
+Fixed Fixed::operator-- (int)
+{
+	Fixed	aux;
+	
+	std::cout << "'Pos decrement' operator called" << std::endl;
+	aux._fixedPoint = this->_fixedPoint--;
+	return (aux);
+}
+
+Fixed& Fixed::min(Fixed &F1, Fixed &F2)
+{
+	if (F1 > F2)
+		return (F2);
+	return (F1);
+}
+
+const Fixed& Fixed::min(Fixed const &F1, Fixed const &F2)
+{
+	Fixed	F1_aux( F1 );
+	Fixed	F2_aux( F2 );
+
+	if (F1_aux > F2_aux)
+		return (F2);
+	return (F1);
+}
+
+Fixed& Fixed::max(Fixed &F1, Fixed &F2)
+{
+	if (F1 > F2)
+		return (F1);
+	return (F2);
+}
+
+const Fixed& Fixed::max(Fixed const &F1, Fixed const &F2)
+{
+	Fixed	F1_aux( F1 );
+	Fixed	F2_aux( F2 );
+
+	if (F1_aux > F2_aux)
+		return (F1);
+	return (F2);
 }
 
 // Destructor
