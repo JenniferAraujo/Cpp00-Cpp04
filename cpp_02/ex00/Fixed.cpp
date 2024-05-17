@@ -20,13 +20,6 @@ Fixed& Fixed::operator= (const Fixed &copy)
     return *this;
 }
 
-// Destructor
-Fixed::~Fixed()
-{
-    std::cout << "Destructor called" << std::endl;
-    return ;
-}
-
 // Member function to get raw bits
 int Fixed::getRawBits( void ) const
 {
@@ -38,4 +31,10 @@ int Fixed::getRawBits( void ) const
 void Fixed::setRawBits( int const raw )
 {
         this->_fixedPoint = raw;
+}
+// Destructor
+Fixed::~Fixed()
+{
+    std::cout << "Destructor called" << std::endl;
+    return ;
 }

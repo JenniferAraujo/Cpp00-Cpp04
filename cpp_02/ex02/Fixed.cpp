@@ -107,8 +107,7 @@ Fixed Fixed::operator++ ()
 
 	std::cout << "'Pre Increment' operator called" << std::endl;
 	++this->_fixedPoint;
-	aux._fixedPoint = this->_fixedPoint;
-	return (aux);
+	return (*this);
 }
 
 Fixed Fixed::operator++ (int)
@@ -126,8 +125,7 @@ Fixed Fixed::operator-- ()
 
 	std::cout << "'Pre decrement' operator called" << std::endl;
 	--this->_fixedPoint;
-	aux._fixedPoint = this->_fixedPoint;
-	return (aux);
+	return (*this);
 }
 
 Fixed Fixed::operator-- (int)
