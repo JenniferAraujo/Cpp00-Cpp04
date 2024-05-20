@@ -1,5 +1,5 @@
-#ifndef CLAPTRAP_H
-#define CLAPTRAP_H
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 # include <iostream>
 # include <string>
@@ -22,17 +22,17 @@ class	ClapTrap {
 		ClapTrap(); //simples construtor: inicializa novos objetos
 		ClapTrap(std::string name); //
 		ClapTrap(const ClapTrap &copy); //copia constructor: permite criação de um novo objt a partir de outro objt da mesma classe
-        
+
 		//sobrecarga do operador de atribuicao de copia: permite a atribuição de um objt a outro objt da mesma classe
 		ClapTrap& operator= (const ClapTrap &copy); 
-      
-	  //Funcoes de acoes 
+
+		//Funcoes de acoes 
 		void	attack(const std::string& target); //simula um ataque, imprime mensagem e diminui os pontos de vida do alvo de acordo com o dano de ataque
 		void	takeDamage(unsigned int amount); //simula o ClapTrap recebendo danos, imprime mensagem com o dano e diminui os pontos de vida do Claptrap
 		void	beRepaired(unsigned int amount); //simula o ClapTrap sendo reparado, imprime mensagem e aumenta os pontos de vida do ClapTrap
 
-        //destructor
+		//destructor
 		~ClapTrap();
-}
+};
 
 #endif
