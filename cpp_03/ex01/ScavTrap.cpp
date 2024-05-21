@@ -1,9 +1,12 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(): ClapTrap()
 {
-	std::cout << MAGENTA << "ScavTrap default constructor called" << RESET << std::endl;
+	_health = 100;
+	_energy = 50;
+	_attackDamage = 20;
+	std::cout << MAGENTA << "Default ScavTrap constructor called" << RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
@@ -11,7 +14,7 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	_health = 100;
 	_energy = 50;
 	_attackDamage = 20;
-	std::cout << MAGENTA << "ScavTrap name constructor called" << RESET << std::endl;
+	std::cout << MAGENTA << "Name ScavTrap constructor called" << RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy)
@@ -33,9 +36,20 @@ ScavTrap& ScavTrap::operator= (const ScavTrap &copy)
 	return (*this);
 }
 
+void	ScavTrap::attack(const std::string& target)
+{
+	if (this->_health > 0 && this->_energy > 0)
+	{
+		std::cout << MAGENTA << this->_name << " ScavTrap attacks " << target << " causing " << this->_attackDamage << " points of damage!" << RESET << std::endl;
+		this->_energy -= 1;
+	}
+	else
+		std::cout << MAGENTA << this->_name << " ScavTrap can't attack because is dead" << RESET << std::endl;
+}
+
 void	ScavTrap::guardGate()
 {
-	std::cout <<  MAGENTA << this->_name << "ScavTrap is now in Gate keeper mode" << RESET << std::endl;
+	std::cout <<  MAGENTA << this->_name << " ScavTrap is now in Gate keeper mode" << RESET << std::endl;
 }
 
 ScavTrap::~ScavTrap()

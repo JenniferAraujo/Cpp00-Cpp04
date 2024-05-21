@@ -1,7 +1,10 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap(): ClapTrap()
 {
+	_health = 100;
+	_energy = 100;
+	_attackDamage = 30;
 	std::cout << YELLOW << "FragTrap default constructor called" << RESET << std::endl;
 }
 
@@ -34,7 +37,7 @@ FragTrap& FragTrap::operator= (const FragTrap &copy)
 
 void	FragTrap::highFivesGuys()
 {
-	std::cout <<  YELLOW << this->_name << "FragTrap is now in Gate keeper mode" << RESET << std::endl;
+	std::cout << YELLOW << "FragTrap " << this->_name << ": You want a high five?" << RESET << std::endl;
 }
 
 FragTrap::~FragTrap()

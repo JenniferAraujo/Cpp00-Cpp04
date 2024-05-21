@@ -1,5 +1,5 @@
 #ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <iostream>
 # include <string>
@@ -30,6 +30,11 @@ class	ClapTrap {
 		void	attack(const std::string& target); //simula um ataque, imprime mensagem e diminui os pontos de vida do alvo de acordo com o dano de ataque
 		void	takeDamage(unsigned int amount); //simula o ClapTrap recebendo danos, imprime mensagem com o dano e diminui os pontos de vida do Claptrap
 		void	beRepaired(unsigned int amount); //simula o ClapTrap sendo reparado, imprime mensagem e aumenta os pontos de vida do ClapTrap
+
+		std::string	getName() const;
+		int	getHealth() const;
+		int	getEnergy() const;
+		int	getAttackDamage() const;
 
 		//destructor
 		~ClapTrap();
