@@ -2,7 +2,7 @@ GREEN	:= \033[1;32m
 RED		:= \033[1;31m
 RES		:= \033[0m
 
-SRC = Animal.cpp main.cpp
+SRC = Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
 RM = rm -f

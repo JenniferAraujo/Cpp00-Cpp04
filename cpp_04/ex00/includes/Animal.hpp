@@ -18,10 +18,18 @@
 
 class Animal {
     protected:
-        std::string type;
+        std::string _type;
 public:
     Animal();
-    ~Animal();
+    Animal(std::string  type);
+    Animal (const Animal &copy);
+    Animal& operator= (const Animal& copy);
+
+    std::string getType() const;
+    virtual void makeSound() const;
+    
+    //Destructor
+    virtual ~Animal();
 };
 
 #endif

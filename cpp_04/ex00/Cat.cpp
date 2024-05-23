@@ -1,26 +1,17 @@
-#include "Cat.hpp"
+#include "./includes/Cat.hpp"
 
 Cat::Cat()
 {
-	std::cout<< "Cat default constructor called" << std::endl;
+	_type = "Cat";
+	std::cout<< YELLOW << "Cat default constructor called" << RESET <<std::endl;
 }
 
-// Copy constructor
-Cat::Cat(const Cat& copy)
+void	Cat::makeSound() const
 {
-	std::cout<< "Cat copy constructor called" << std::endl;
-}
-
-// Copy assignment operator overload
-Cat& Cat::operator= (const Cat& copy)
-{
-	if (this == &copy)
-		return *this;
-	std::cout<< "Cat copy assignment operator overload" << std::endl;
-	return (*this);
+	std::cout << YELLOW << "Meow 🐱" << RESET << std::endl;
 }
 
 Cat::~Cat()
 {
-	std::cout<< "Cat destructor called" << std::endl;
+	std::cout << YELLOW << "Cat destructor called" << RESET << std::endl;
 }
