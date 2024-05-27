@@ -9,8 +9,8 @@ class Dog : public Animal
 		Dog(); // Constructor
 		Dog(const Dog& copy);//Copy constructor
 		Dog& operator= (const Dog& copy); //Copy assignment constructor
-		~Dog(); // Destructor
 		void    makeSound() const;
+		~Dog(); // Destructor
 };
 
 #endif

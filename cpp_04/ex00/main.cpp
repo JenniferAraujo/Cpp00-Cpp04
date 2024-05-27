@@ -27,17 +27,17 @@ int main(void)
 	std::cout << "\n\e[1;31m ** Wrong Animals **\e[1;34m" << RESET << std::endl << std::endl;
 	
 	std::cout << "\e[1;34mConstructing\e[1;34m" << RESET << std::endl;
-	const WrongAnimal* wrongMeta = new WrongAnimal();
+	const WrongAnimal* wrongAnimal = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();
 
 	std::cout << "\n\e[1;34mTests\e[1;34m" << RESET << std::endl; 
 	std::cout << wrongCat->getType() << " says: ";
 	wrongCat->makeSound();
-	std::cout << wrongMeta->getType() << " says: ";
-	wrongMeta->makeSound();
+	std::cout << wrongAnimal->getType() << " says: ";
+	wrongAnimal->makeSound();
 
 	std::cout << "\n\e[1;34mDeconstructing\e[1;34m" << std::endl;
-	delete wrongMeta;
+	delete wrongAnimal;
 	delete wrongCat;
 
 	return (0);

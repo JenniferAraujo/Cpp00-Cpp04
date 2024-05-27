@@ -6,9 +6,9 @@ SRC = Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
 RM = rm -f
-CXXFLAGS = #-Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = brain
+NAME = animal
 
 all: $(NAME)
 

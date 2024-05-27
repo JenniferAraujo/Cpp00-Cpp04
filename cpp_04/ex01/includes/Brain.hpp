@@ -27,6 +27,9 @@ class Brain
 		Brain(const Brain& copy); // copy constructor
 		Brain& operator= (const Brain& copy); // Copy assignment constructor
 
+		std::string getIdea(int index) const;
+    	void setIdea(int index, const std::string& idea);
+		
 		//destructor
 		~Brain();
 };
