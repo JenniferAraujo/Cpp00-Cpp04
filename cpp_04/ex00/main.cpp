@@ -16,7 +16,7 @@ int	main(void)
 	dog->makeSound();
 	std::cout << cat->getType() << " says: ";
 	cat->makeSound();
-
+	std::cout << animal->getType() << " says: ";
 	animal->makeSound();
 
 	std::cout << "\n\e[1;34mDeconstructing\e[1;34m" << std::endl;
@@ -29,16 +29,20 @@ int	main(void)
 	std::cout << "\e[1;34mConstructing\e[1;34m" << RESET << std::endl;
 	const WrongAnimal* wrongAnimal = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();
+	const WrongCat* wrongcat1 = new WrongCat();
 
 	std::cout << "\n\e[1;34mTests\e[1;34m" << RESET << std::endl; 
 	std::cout << wrongCat->getType() << " says: ";
 	wrongCat->makeSound();
 	std::cout << wrongAnimal->getType() << " says: ";
 	wrongAnimal->makeSound();
+	std::cout << wrongcat1->getType() << " says: ";
+	wrongcat1->makeSound();
 
 	std::cout << "\n\e[1;34mDeconstructing\e[1;34m" << std::endl;
 	delete wrongAnimal;
 	delete wrongCat;
+	delete wrongcat1;
 
 	return (0);
 }

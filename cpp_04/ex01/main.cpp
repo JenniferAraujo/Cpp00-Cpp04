@@ -7,10 +7,10 @@
 
 void	testDeepCopy(const Dog& originalDog)
 {
+	originalDog.getBrain()->setIdea(0, "Original idea");
+
 	Dog copiedDog = originalDog;
 	copiedDog.makeSound();
-
-	originalDog.getBrain()->setIdea(0, "Original idea");
 
 	std::cout << "\nOriginal Dog idea: " << originalDog.getBrain()->getIdea(0) << std::endl;
 	std::cout << "Copied Dog idea: " << copiedDog.getBrain()->getIdea(0) << std::endl;
