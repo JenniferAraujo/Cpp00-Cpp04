@@ -24,12 +24,11 @@ class Animal
 		std::string _type;
 	public:
 		Animal();
-		Animal(std::string  type);
 		Animal (const Animal &copy);
-		Animal& operator= (const Animal& copy);
+		virtual Animal& operator= (const Animal& copy);
 
-		std::string getType() const;
-		virtual void makeSound() const;
+		virtual std::string getType() const;
+		virtual void makeSound() const = 0;
 		
 		//Destructor
 		virtual ~Animal();

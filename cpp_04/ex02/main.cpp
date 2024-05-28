@@ -5,15 +5,15 @@
 # include "./includes/WrongCat.hpp"
 # include "./includes/Brain.hpp"
 
-void	testDeepCopy(const Dog& originalDog)
+void	testDeepCopy(const Cat& originalCat)
 {
-	Dog copiedDog = originalDog;
-	copiedDog.makeSound();
+	Cat copiedCat = originalCat;
+	copiedCat.makeSound();
 
-	originalDog.getBrain()->setIdea(0, "Original idea");
+	originalCat.getBrain()->setIdea(0, "Original idea");
 
-	std::cout << "\nOriginal Dog idea: " << originalDog.getBrain()->getIdea(0) << std::endl;
-	std::cout << "Copied Dog idea: " << copiedDog.getBrain()->getIdea(0) << std::endl;
+	std::cout << "\nOriginal Cat idea: " << originalCat.getBrain()->getIdea(0) << std::endl;
+	std::cout << "Copied Cat idea: " << copiedCat.getBrain()->getIdea(0) << std::endl;
 }
 
 int	main(void)
@@ -26,8 +26,8 @@ int	main(void)
 		cat.makeSound();
 	}
 	std::cout << "\n\e[1;34mTesting deep copy\e[1;34m" << RESET << std::endl; 
-	Dog originalDog;
-	testDeepCopy(originalDog);
+	Cat originalCat;
+	testDeepCopy(originalCat);
 
 	std::cout << "\n\e[1;34mTesting array of animals\e[1;34m" << RESET << std::endl; 
 	const int numAnimals = 4;

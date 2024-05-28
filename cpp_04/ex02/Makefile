@@ -8,7 +8,7 @@ CXX = c++
 RM = rm -f
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = brain
+NAME = animal
 
 all: $(NAME)
 

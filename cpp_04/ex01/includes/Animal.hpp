@@ -14,6 +14,8 @@
 # define CYAN    "\e[0;36m"
 # define MAGENTA "\033[0;35m"
 # define YELLOW  "\e[0;33m"
+# define GREEN	"\e[0;32m"
+# define ORANGE	"\e[38;5;208m"
 # define RESET "\033[0m"
 
 class Animal
@@ -22,11 +24,10 @@ class Animal
 		std::string _type;
 	public:
 		Animal();
-		Animal(std::string  type);
 		Animal (const Animal &copy);
-		Animal& operator= (const Animal& copy);
+		virtual Animal& operator= (const Animal& copy);
 
-		std::string getType() const;
+		virtual std::string getType() const;
 		virtual void makeSound() const;
 		
 		//Destructor

@@ -6,7 +6,7 @@
 class WrongCat : public WrongAnimal {
 	public:
 		WrongCat(); // Constructor
-		WrongCat (const WrongCat &copy); //copu constructor
+		WrongCat(const WrongCat &copy); //copy constructor
 		WrongCat& operator= (const WrongCat& copy);// copy assignment constructor
 		void    makeSound() const;
 		~WrongCat(); // Destructor

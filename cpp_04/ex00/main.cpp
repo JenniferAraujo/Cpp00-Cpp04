@@ -4,7 +4,7 @@
 # include "./includes/WrongAnimal.hpp"
 # include "./includes/WrongCat.hpp"
 
-int main(void)
+int	main(void)
 {
 	std::cout << "\e[1;34mConstructing\e[1;34m" << RESET << std::endl;
 	const Animal* animal = new Animal();

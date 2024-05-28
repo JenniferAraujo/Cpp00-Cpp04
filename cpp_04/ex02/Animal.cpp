@@ -27,11 +27,6 @@ std::string Animal::getType() const
 	return (this->_type);
 }
 
-void	Animal::makeSound() const
-{
-	std::cout << CYAN << "Some animal sound" << RESET << std::endl;
-}
-
 Animal::~Animal()
 {
 	std::cout << CYAN << "Animal destructor called" << RESET << std::endl;
